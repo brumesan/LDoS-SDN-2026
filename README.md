@@ -18,8 +18,4 @@ Para reproduzir os experimentos, você precisará de:
 * Mininet (Ambiente de rede)
 * Bibliotecas listadas em `requirements.txt`
 
-### Instalação
-```bash
-git clone [https://github.com/brumesan/LDoS-SDN-2026.git](https://github.com/brumesan/LDoS-SDN-2026.git)
-cd LDoS-SDN-2026
-pip install -r requirements.txt
+
