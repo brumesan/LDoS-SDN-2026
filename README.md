@@ -8,14 +8,9 @@ O projeto avalia o impacto de ataques de negação de serviço de baixo volume (
 
 ## Estrutura do Repositório
 * `src/train.py`: Script para treinamento do modelo de detecção (XGBoost).
+* `src/traffic.py`: Script para geração de tráfego.
 * `main.py`: Script principal para execução dos testes e coleta de métricas.
 * `data/`: Conjunto de dados utilizado nos experimentos.
 * `LICENSE`: Licença MIT de código aberto.
-
-## Requisitos
-Para reproduzir os experimentos, você precisará de:
-* Python 3.8+
-* Mininet (Ambiente de rede)
-* Bibliotecas listadas em `requirements.txt`
 
 
