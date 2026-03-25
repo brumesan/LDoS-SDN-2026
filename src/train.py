@@ -40,7 +40,7 @@ except Exception as e:
 
 # === Arguments =====
 parser = argparse.ArgumentParser(description="XGBoost Incremental Training (labels prontas)")
-default_csv = "trident_output_labeled.csv"
+default_csv = "output_labeled.csv"
 parser.add_argument('--csv', default=default_csv, help=f'Labeled CSV path (default: {default_csv})')
 parser.add_argument('--b_mbit', type=float, default=45.0, help='Bottleneck bandwidth in Mbps (default: 45)')
 parser.add_argument('--test_size', type=float, default=0.25, help='Test ratio (default: 0.25)')
@@ -56,9 +56,9 @@ if not os.path.exists(CSV_PATH):
 
 # == Path ==
 csv_dir = os.path.dirname(CSV_PATH) or "."
-MODEL_PATH = os.path.join(csv_dir, "trident_xgb_model.json")
-SCALER_PATH = os.path.join(csv_dir, "trident_scaler.pkl")
-RESULTS_LOG = os.path.join(csv_dir, "trident_train_results.log")
+MODEL_PATH = os.path.join(csv_dir, "xgb_model.json")
+SCALER_PATH = os.path.join(csv_dir, "scaler.pkl")
+RESULTS_LOG = os.path.join(csv_dir, "train_results.log")
 
 # == CSV reading ==
 df = pd.read_csv(CSV_PATH, low_memory=False)
