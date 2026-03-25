@@ -4,7 +4,7 @@
 Este repositório contém o código-fonte e os experimentos apresentados no artigo aceito no Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos (SBRC 2026).
 
 ## Descrição
-O projeto avalia o impacto de ataques de negação de serviço de baixo volume (LDoS) em redes definidas por software (SDN) e como contramedidas estáticas sofrem degradação de desempenho sob diferentes cenários de carga.
+O projeto avalia o impacto de ataques de negação de serviço de baixo volume (LDoS) em redes definidas por software (SDN) e como contramedidas estáticas sofrem degradação de desempenho sob diferentes cenários, caracterizando deriva de conceito.
 
 ## Estrutura do Repositório
 * `src/train.py`: Script para treinamento do modelo de detecção (XGBoost).
