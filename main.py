@@ -36,11 +36,11 @@ def entropy_from_counts(counts):
     return ent
 
 
-class TridentCollector(app_manager.RyuApp):
+class Collector(app_manager.RyuApp):
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
 
     def __init__(self, *args, **kwargs):
-        super(TridentCollector, self).__init__(*args, **kwargs)
+        super(Collector, self).__init__(*args, **kwargs)
         self.datapaths = {}
         self.interval = 0.5
         self.port_stats = {}
@@ -49,8 +49,8 @@ class TridentCollector(app_manager.RyuApp):
         self.blacklist = set()
 
         # === Modelo XGBoost + Scaler ===
-        self.model_path = "trident_xgb_model.json"
-        self.scaler_path = "trident_scaler.pkl"
+        self.model_path = "xgb_model.json"
+        self.scaler_path = "scaler.pkl"
         if os.path.exists(self.model_path) and os.path.exists(self.scaler_path):
             try:
                 self.model = xgb.XGBClassifier()
@@ -70,7 +70,7 @@ class TridentCollector(app_manager.RyuApp):
         output_dir = "results"
         os.makedirs(output_dir, exist_ok=True)
         timestamp = time.strftime("%Y%m%d_%H%M%S")
-        self.csv_file = os.path.join(output_dir, f"trident_output_{timestamp}.csv")
+        self.csv_file = os.path.join(output_dir, f"output_{timestamp}.csv")
 
         # === Algorithm parameters ===
         self.WINDOW_SIZE = 30
