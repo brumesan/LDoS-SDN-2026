@@ -24,47 +24,47 @@ Os experimentos foram conduzidos em um ambiente emulado de Software-Defined Netw
 
 ## Requisitos de Hardware
 Os experimentos foram executados em servidor com as seguintes especificações:
-*Processador: 11th Gen Intel(R) Core(TM) i9-11900K @ 3.50GHz
-*Memória RAM: 128 GB DDR4 (4 × 32 GB, 3200 MHz)
-*Armazenamento: 2TB 
-*Sistema Operacional: Linux (Ubuntu 22.04.5 LTS)
+* Processador: 11th Gen Intel(R) Core(TM) i9-11900K @ 3.50GHz
+* Memória RAM: 128 GB DDR4 (4 × 32 GB, 3200 MHz)
+* Armazenamento: 2TB 
+* Sistema Operacional: Linux (Ubuntu 22.04.5 LTS)
 
 A elevada capacidade de memória e processamento foi utilizada para garantir estabilidade experimental e minimizar interferências de contenção de recursos, não sendo estritamente necessária para reprodução dos experimentos.
 
 ## Requisitos de Software
-*Ambiente Base: Python 3.8+, Mininet, Open vSwitch, Ryu (OpenFlow 1.3), iperf3 (Geração de tráfego) e Socket Python (Geração do Ataque).
+* Ambiente Base: Python 3.8+, Mininet, Open vSwitch, Ryu (OpenFlow 1.3), iperf3 (Geração de tráfego) e Socket Python (Geração do Ataque).
 
 ## Bibliotecas
-*numpy, pandas, joblib, xgboost.
+* numpy, pandas, joblib, xgboost.
 
 ## Preocupações com segurança
 A execução dos artefatos não oferece risco de segurança para os avaliadores.
 
 ## Instalação.
-*Atualização do Sistema
+* Atualização do Sistema
 sudo apt update && sudo apt upgrade -y
 
-*Instalação de ferramentas básicas
+* Instalação de ferramentas básicas
 sudo apt install -y git python3 python3-pip build-essential iperf3
 
-*Instalação das bibliotecas Python
+* Instalação das bibliotecas Python
 pip3 install numpy pandas scikit-learn xgboost joblib
 
-*Instalação do Mininet, Open vSwitch e utilitários de rede
+* Instalação do Mininet, Open vSwitch e utilitários de rede
 git clone https://github.com/mininet/mininet
 cd mininet
 sudo ./util/install.sh -a
 
-*Instalação do Controlador Ryu 
+* Instalação do Controlador Ryu 
 pip3 install ryu
 
-*Permissões
+* Permissões
 sudo chmod -R 755 /home/<user>/mininet/
 
-*Criação do diretório de resultados
+* Criação do diretório de resultados
 mkdir -p /home/<user>/mininet/mininet/resultados
 
-*Organização do Projeto
+* Organização do Projeto
 Os arquivos devem ser organizados conforme a seguinte estrutura:
 
 /home/<user>/mininet/mininet/
@@ -79,30 +79,30 @@ Os arquivos devem ser organizados conforme a seguinte estrutura:
 ## Teste mínimo
 Este teste tem como objetivo verificar se o ambiente foi corretamente instalado e se os principais componentes do sistema estão funcionando adequadamente. O teste executa um cenário simplificado com tráfego legítimo e geração automática de dados, permitindo a validação do pipeline completo.
 
-*Limpeza do ambiente
+* Limpeza do ambiente
 sudo mn -c
 
-*Inicialização do controlador
+* Inicialização do controlador
 ryu-manager ryu.app.simple_switch_13 collector.py
 
-*Execução do cenário
+* Execução do cenário
 sudo python3 traffic.py
 
-*Geração de arquivo CSV
+* Geração de arquivo CSV
 /home/<user>/mininet/mininet/results/
 
 ## Experimentos.
 ## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
 Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataques LDoS em um ambiente SDN, combinando análise estatística de portas com classificação realizada pelo XGBoost.
 
-*Arquivos utilizados: collector.py e traffic.py
-*Tempo de duração: 240 segundos
+* Arquivos utilizados: collector.py e traffic.py
+* Tempo de duração: 240 segundos
 * Execução:
 sudo mn -c
 ryu-manager ryu.app.simple_switch_13 collector.py
 sudo python3 traffic.py
 
-*Resultado Esperado: 
+* Resultado Esperado: 
 1- Evidências de Estado de porta
 2- Classificação do modelo
 3- CSV gerado em /home/<user>/mininet/mininet/results/
