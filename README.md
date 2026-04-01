@@ -71,7 +71,7 @@ sudo chmod -R 755 /home/"user"/mininet/
 
 * Criação do diretório de resultados
   
-mkdir -p /home/<user>/mininet/mininet/resuls
+mkdir -p /home/"user"/mininet/mininet/resuls
 
 * Organização do Projeto
   
@@ -109,7 +109,7 @@ sudo python3 traffic.py
 
 * Geração de arquivo CSV
   
-/home/<user>/mininet/mininet/results/
+/home/"user"/mininet/mininet/results/
 
 ## Experimentos.
 ## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
@@ -131,7 +131,7 @@ sudo python3 traffic.py
 
 2- Classificação do modelo
 
-3- CSV gerado em /home/<user>/mininet/mininet/results/
+3- CSV gerado em /home/"user"/mininet/mininet/results/
 
 4- Logs do iperf em /tmp/
 
