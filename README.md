@@ -43,29 +43,36 @@ A execução dos artefatos não oferece risco de segurança para os avaliadores.
 ## Instalação.
 * Atualização do Sistema
   
-#sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 * Instalação de ferramentas básicas
+  
 sudo apt install -y git python3 python3-pip build-essential iperf3
 
 * Instalação das bibliotecas Python
+  
 pip3 install numpy pandas scikit-learn xgboost joblib
 
 * Instalação do Mininet, Open vSwitch e utilitários de rede
+  
 git clone https://github.com/mininet/mininet
 cd mininet
 sudo ./util/install.sh -a
 
-* Instalação do Controlador Ryu 
+* Instalação do Controlador Ryu
+  
 pip3 install ryu
 
 * Permissões
+  
 sudo chmod -R 755 /home/<user>/mininet/
 
 * Criação do diretório de resultados
+  
 mkdir -p /home/<user>/mininet/mininet/resultados
 
 * Organização do Projeto
+  
 Os arquivos devem ser organizados conforme a seguinte estrutura:
 
 /home/<user>/mininet/mininet/
