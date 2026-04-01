@@ -45,8 +45,7 @@ A execução dos artefatos não oferece risco de segurança para os avaliadores.
 sudo apt update && sudo apt upgrade -y
 
 *Instalação de ferramentas básicas
-sudo apt install -y git python3 python3-pip build-essential
-sudo apt install -y iperf3
+sudo apt install -y git python3 python3-pip build-essential iperf3
 
 *Instalação das bibliotecas Python
 pip3 install numpy pandas scikit-learn xgboost joblib
