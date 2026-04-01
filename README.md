@@ -67,17 +67,17 @@ pip3 install ryu
 
 * Permissões
   
-sudo chmod -R 755 /home/"user"/mininet/
+sudo chmod -R 755 /home/$USER/mininet/
 
-* Criação do diretório de resultados
+* Criação do diretório de results
   
-mkdir -p /home/"user"/mininet/mininet/resuls
+mkdir -p /home/$USER/mininet/mininet/results
 
 * Organização do Projeto
   
 Os arquivos devem ser organizados conforme a seguinte estrutura:
 
-/home/<user>/mininet/mininet/
+/home/$USER/mininet/mininet/
 │
 
 ├── collector.py
@@ -90,7 +90,7 @@ Os arquivos devem ser organizados conforme a seguinte estrutura:
 
 ├── scaler.pkl
 
-└── resultados/
+└── results/
 
 ## Teste mínimo
 Este teste tem como objetivo verificar se o ambiente foi corretamente instalado e se os principais componentes do sistema estão funcionando adequadamente. O teste executa um cenário simplificado com tráfego legítimo e geração automática de dados, permitindo a validação do pipeline completo.
@@ -109,9 +109,9 @@ sudo python3 traffic.py
 
 * Geração de arquivo CSV
   
-/home/"user"/mininet/mininet/results/
+/home/$USER/mininet/mininet/results/
 
-Faz-se necessário a criação do seguinte caminho de diretório /home/"user"/mininet/mininet/results/ nos arquivos: collector.py (output_dir = "results") e traffic.py ("RESULTS_DIR = "results"). 
+Faz-se necessário a criação do seguinte caminho de diretório /home/$USER/mininet/mininet/results/ nos arquivos: collector.py (output_dir = "results") e traffic.py ("RESULTS_DIR = "results"). 
 
 ## Experimentos.
 ## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
@@ -129,11 +129,11 @@ sudo python3 traffic.py
 
 * Resultado Esperado:
   
-1- Evidências de Estado de porta
+1- Evidências de Estado de porta (Normal / Abnormal)
 
 2- Classificação do modelo
 
-3- CSV gerado em /home/"user"/mininet/mininet/results/
+3- CSV gerado em /home/$USER/mininet/mininet/results/
 
 4- Logs do iperf em /tmp/
 
