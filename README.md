@@ -67,7 +67,7 @@ pip3 install ryu
 
 * Permissões
   
-sudo chmod -R 755 /home/<user>/mininet/
+sudo chmod -R 755 /home/<<user>>/mininet/
 
 * Criação do diretório de resultados
   
