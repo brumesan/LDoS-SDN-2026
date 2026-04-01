@@ -93,12 +93,18 @@ sudo python3 traffic.py
 /home/<user>/mininet/mininet/resultados/
 
 ## Experimentos.
-* Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
+## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
 Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataques LDoS em um ambiente SDN, combinando análise estatística de portas com classificação realizada pelo XGBoost.
 
 *Arquivos utilizados: collector.py e traffic.py
-*
+*Tempo de duração: 240 segundos
 * Execução:
 sudo mn -c
 ryu-manager ryu.app.simple_switch_13 collector.py
 sudo python3 traffic.py
+
+*Resultado Esperado: 
+1- Evidências de Estado de porta
+2- Classificação do modelo
+3- CSV gerado em /home/<user>/mininet/mininet/resultados/
+
