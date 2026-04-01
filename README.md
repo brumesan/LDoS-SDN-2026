@@ -35,7 +35,7 @@ A elevada capacidade de memória e processamento foi utilizada para garantir est
 * Ambiente Base: Python 3.8+, Mininet, Open vSwitch, Ryu (OpenFlow 1.3), iperf3 (Geração de tráfego) e Socket Python (Geração do Ataque).
 
 ## Bibliotecas
-* numpy, pandas, joblib, xgboost.
+* numpy, pandas, joblib, xgboost, scikit-learn
 
 ## Preocupações com segurança
 A execução dos artefatos não oferece risco de segurança para os avaliadores.
@@ -69,7 +69,7 @@ pip3 install ryu
   
 sudo chmod -R 755 /home/$USER/mininet/
 
-* Criação do diretório de results
+* Criação do diretório de resultados.
   
 mkdir -p /home/$USER/mininet/mininet/results
 
@@ -129,9 +129,9 @@ sudo python3 traffic.py
 
 * Resultado Esperado:
   
-1- Evidências de Estado de porta (Normal / Abnormal)
+1- Alteração da coluna "port_state" entre "normal" e "abnormal"
 
-2- Classificação do modelo
+2- Registro de Classificação do modelo
 
 3- CSV gerado em /home/$USER/mininet/mininet/results/
 
