@@ -42,7 +42,8 @@ A execução dos artefatos não oferece risco de segurança para os avaliadores.
 
 ## Instalação.
 * Atualização do Sistema
-sudo apt update && sudo apt upgrade -y
+  
+#sudo apt update && sudo apt upgrade -y
 
 * Instalação de ferramentas básicas
 sudo apt install -y git python3 python3-pip build-essential iperf3
