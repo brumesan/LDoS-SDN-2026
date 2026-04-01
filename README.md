@@ -56,7 +56,9 @@ pip3 install numpy pandas scikit-learn xgboost joblib
 * Instalação do Mininet, Open vSwitch e utilitários de rede
   
 git clone https://github.com/mininet/mininet
+
 cd mininet
+
 sudo ./util/install.sh -a
 
 * Instalação do Controlador Ryu
@@ -77,11 +79,17 @@ Os arquivos devem ser organizados conforme a seguinte estrutura:
 
 /home/<user>/mininet/mininet/
 │
+
 ├── collector.py
+
 ├── train.py
+
 ├── traffic.py
+
 ├── xgb_model.json
+
 ├── scaler.pkl
+
 └── resultados/
 
 ## Teste mínimo
@@ -112,7 +120,9 @@ Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataqu
 * Execução:
   
 sudo mn -c
+
 ryu-manager ryu.app.simple_switch_13 collector.py
+
 sudo python3 traffic.py
 
 * Resultado Esperado:
