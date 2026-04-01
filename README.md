@@ -98,6 +98,7 @@ Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataqu
 * Arquivos utilizados: collector.py e traffic.py
 * Tempo de duração: 240 segundos
 * Execução:
+  
 sudo mn -c
 ryu-manager ryu.app.simple_switch_13 collector.py
 sudo python3 traffic.py
