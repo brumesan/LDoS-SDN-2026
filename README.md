@@ -83,7 +83,7 @@ Este teste tem como objetivo verificar se o ambiente foi corretamente instalado 
 sudo mn -c
 
 *Inicialização do controlador
-ryu-manager collector.py
+ryu-manager ryu.app.simple_switch_13 collector.py
 
 *Execução do cenário
 sudo python3 traffic.py
@@ -99,11 +99,12 @@ Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataqu
 *Tempo de duração: 240 segundos
 * Execução:
 sudo mn -c
-ryu-manager collector.py
+ryu-manager ryu.app.simple_switch_13 collector.py
 sudo python3 traffic.py
 
 *Resultado Esperado: 
 1- Evidências de Estado de porta
 2- Classificação do modelo
 3- CSV gerado em /home/<user>/mininet/mininet/results/
+4- Logs do iperf em /tmp/
 
