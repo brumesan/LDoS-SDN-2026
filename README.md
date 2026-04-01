@@ -111,7 +111,7 @@ sudo python3 traffic.py
   
 /home/"user"/mininet/mininet/results/
 
-Faz-se necessário a criação do seguinte caminho de diretório /home/"user"/mininet/mininet/results/ nos arquivos: collector.py e traffic.py ("RESULTS_DIR = "results"). 
+Faz-se necessário a criação do seguinte caminho de diretório /home/"user"/mininet/mininet/results/ nos arquivos: collector.py (output_dir = "results") e traffic.py ("RESULTS_DIR = "results"). 
 
 ## Experimentos.
 ## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
