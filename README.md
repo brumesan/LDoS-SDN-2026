@@ -84,13 +84,13 @@ Este teste tem como objetivo verificar se o ambiente foi corretamente instalado 
 sudo mn -c
 
 *Inicialização do controlador
-ryu-manager ryu.app.simple_switch_13 collector.py
+ryu-manager collector.py
 
 *Execução do cenário
 sudo python3 traffic.py
 
 *Geração de arquivo CSV
-/home/<user>/mininet/mininet/resultados/
+/home/<user>/mininet/mininet/results/
 
 ## Experimentos.
 ## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
@@ -100,11 +100,11 @@ Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataqu
 *Tempo de duração: 240 segundos
 * Execução:
 sudo mn -c
-ryu-manager ryu.app.simple_switch_13 collector.py
+ryu-manager collector.py
 sudo python3 traffic.py
 
 *Resultado Esperado: 
 1- Evidências de Estado de porta
 2- Classificação do modelo
-3- CSV gerado em /home/<user>/mininet/mininet/resultados/
+3- CSV gerado em /home/<user>/mininet/mininet/results/
 
