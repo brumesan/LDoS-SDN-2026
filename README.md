@@ -71,7 +71,7 @@ sudo chmod -R 755 /home/<user>/mininet/
 
 * Criação do diretório de resultados
   
-mkdir -p /home/<user>/mininet/mininet/resultados
+mkdir -p /home/<user>/mininet/mininet/resuls
 
 * Organização do Projeto
   
@@ -128,7 +128,10 @@ sudo python3 traffic.py
 * Resultado Esperado:
   
 1- Evidências de Estado de porta
+
 2- Classificação do modelo
+
 3- CSV gerado em /home/<user>/mininet/mininet/results/
+
 4- Logs do iperf em /tmp/
 
