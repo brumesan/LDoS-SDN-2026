@@ -111,6 +111,8 @@ sudo python3 traffic.py
   
 /home/"user"/mininet/mininet/results/
 
+Faz-se necessário a criação do seguinte caminho de diretório /home/"user"/mininet/mininet/results/ nos arquivos: collector.py e traffic.py. 
+
 ## Experimentos.
 ## Reivindicação #1 – Detecção de ataques LDoS em ambiente SDN
 Esta reivindicação demonstra que o sistema proposto é capaz de detectar ataques LDoS em um ambiente SDN, combinando análise estatística de portas com classificação realizada pelo XGBoost.
