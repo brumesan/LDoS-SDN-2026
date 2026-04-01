@@ -80,15 +80,19 @@ Os arquivos devem ser organizados conforme a seguinte estrutura:
 Este teste tem como objetivo verificar se o ambiente foi corretamente instalado e se os principais componentes do sistema estão funcionando adequadamente. O teste executa um cenário simplificado com tráfego legítimo e geração automática de dados, permitindo a validação do pipeline completo.
 
 * Limpeza do ambiente
+  
 sudo mn -c
 
 * Inicialização do controlador
+  
 ryu-manager ryu.app.simple_switch_13 collector.py
 
 * Execução do cenário
+  
 sudo python3 traffic.py
 
 * Geração de arquivo CSV
+  
 /home/<user>/mininet/mininet/results/
 
 ## Experimentos.
@@ -103,7 +107,8 @@ sudo mn -c
 ryu-manager ryu.app.simple_switch_13 collector.py
 sudo python3 traffic.py
 
-* Resultado Esperado: 
+* Resultado Esperado:
+  
 1- Evidências de Estado de porta
 2- Classificação do modelo
 3- CSV gerado em /home/<user>/mininet/mininet/results/
