@@ -77,7 +77,7 @@ class Collector(app_manager.RyuApp):
         self.k = 3
         self.th = 0.0026
         self.sigma_floor = 1e-6
-        self.PROB_THRESHOLD = 0.5
+        self.PROB_THRESHOLD = 0.99
 
         # Time series
         self.series_bytesudp = defaultdict(lambda: deque(maxlen=self.WINDOW_SIZE))
