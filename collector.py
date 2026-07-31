@@ -49,8 +49,8 @@ class Collector(app_manager.RyuApp):
         self.blacklist = set()
 
         # === Modelo XGBoost + Scaler ===
-        self.model_path = "xgb_model.json"
-        self.scaler_path = "scaler.pkl"
+        self.model_path = "home/$USER/mininet/mininet/xgb_model.json"
+        self.scaler_path = "home/$USER/mininet/mininet/scaler.pkl"
         if os.path.exists(self.model_path) and os.path.exists(self.scaler_path):
             try:
                 self.model = xgb.XGBClassifier()
@@ -67,7 +67,7 @@ class Collector(app_manager.RyuApp):
             self.logger.warning("Model/Scaler not found — prediction disabled. ")
 
         # === CSV Path ===
-        output_dir = "results"
+        output_dir = "home/$USER/mininet/mininet/results"
         os.makedirs(output_dir, exist_ok=True)
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         self.csv_file = os.path.join(output_dir, f"output_{timestamp}.csv")
